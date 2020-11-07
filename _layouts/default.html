@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description"
+    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
+    href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  <style>
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/css/JetBrainsMono-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/css/JetBrainsMono-Bold.woff2') format('woff2');;
+  font-weight: bold;
+}
+
+* { box-sizing: border-box; }
+
+h1, h2, h3 { font-weight: 300; }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 80ch;
+    padding-left: 2ch;
+    padding-right: 2ch;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    max-width: 80ch;
+    padding: 1ch;
+    border-bottom: 1px solid rgba(0, 0, 0, .8);
+}
+
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+    max-width: 80ch;
+    padding: 1ch;
+    border-top: 1px solid rgba(0, 0, 0, .8);
+}
+  </style>
+  <link rel="stylesheet" href="{{ "/css/asciidoctor.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/rouge-github.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic%7COpen+Sans:300">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+    <nav>
+      {% for my_page in site.pages %}
+      {% if my_page.title %}
+      <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      {% endif %}
+      {% endfor %}
+      <a href="jmbruel.netlify.app/">Consulting</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <a href="https://github.com/jmbruel/lectures/edit/master/{{ page.path}}">
+        <i class="fa fa-edit"></i> fix typo
+      </a>
+
+      <a href="https://github.com/jmbruel">
+        <i class="fa fa-github"></i> jmbruel
+      </a>
+
+      <a href="https://jmbruel.netlify.app/">
+        <i class="fa fa-briefcase"></i> My web pages
+      </a>
+    </p>
+  </footer>
+</body>
+
+</html>
