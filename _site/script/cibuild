@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-gem install bundler:2.1.4
-
-bundle config set deployment 'true'
 bundle exec jekyll build
 bundle exec htmlproofer ./_site

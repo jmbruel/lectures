@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>Welcome to my lectures</title>
   <meta name="description"
-    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
-    href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    content="Work in progress!!">
+  <link rel="canonical" href="https://jmbruel.github.io/lectures/404.html">
+  <link rel="alternate" type="application/rss+xml" title="Welcome to my lectures"
+    href="https://jmbruel.github.io/lectures/feed.xml">
 
   <style>
 @font-face {
@@ -64,34 +64,60 @@ main {
     border-top: 1px solid rgba(0, 0, 0, .8);
 }
   </style>
-  <link rel="stylesheet" href="{{ "/css/asciidoctor.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/rouge-github.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="/css/asciidoctor.css">
+  <link rel="stylesheet" href="/css/rouge-github.css">
+  <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic%7COpen+Sans:300">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <header class="site-header">
-    <a class="-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="-title" href="/">Welcome to my lectures</a>
 
     <nav>
-      {% for my_page in site.pages %}
-      {% if my_page.title %}
-      <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-      {% endif %}
-      {% endfor %}
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <a href="https://jmbruel.netlify.app/">Consulting</a>
     </nav>
   </header>
 
   <main>
-    {{ content }}
+    <style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="container">
+  <h1>404</h1>
+
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>
+
   </main>
 
   <footer class="site-footer">
     <p>
-      <a href="https://github.com/jmbruel/lectures/edit/master/{{ page.path}}">
+      <a href="https://github.com/jmbruel/lectures/edit/master/404.html">
         <i class="fa fa-edit"></i> Contribute to this content
       </a>
 
