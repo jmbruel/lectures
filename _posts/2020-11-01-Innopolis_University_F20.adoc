@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Innopolis University F20 Courses"
+date:   2020-11-07 18:18:51 +0100
+categories: jekyll update
+---
+= Innopolis University F20
+
+This is a test...
