@@ -1,6 +1,6 @@
 = JMB's Lectures 
 
-image:https://travis-ci.com/jmbruel/lectures.svg?branch=main["Build Status", link="https://travis-ci.com/jmbruel/lectures"]
+image:https://travis-ci.com/jmbruel/lectures.svg?branch=gh-pages["Build Status", link="https://travis-ci.com/jmbruel/lectures"]
 
 The repo of my lectures.
 
