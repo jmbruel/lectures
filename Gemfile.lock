@@ -84,6 +84,7 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
+  i18n
   jekyll-asciidoc
   kramdown-parser-gfm
   minima (~> 2.5)
